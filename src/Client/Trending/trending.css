@@ -1,0 +1,25 @@
+.mainSlider{
+    width: 95vw;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider{
+    display:flex;
+    transition: 5s;
+    animation: animat 15s linear infinite ;
+}
+
+
+@keyframes animat{
+    0% {
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-3000px)
+    } 
+}
+.slider:hover{
+    cursor: pointer;
+    animation-play-state: paused;
+}

@@ -1,0 +1,22 @@
+.personCard{
+    height: 260px;
+    width: 235px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* border: 2px solid; */
+    margin: 10px 15px;
+    /* box-shadow: 0 8px 1px rgb(148 98 128 / 50%); */
+    border-radius: 60%;
+}
+.personCard img{
+    border-radius: 60%;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 8px 24px rgb(148 157 128 / 50%);
+}
+.personCard h4{
+    padding: 10px 0;
+}

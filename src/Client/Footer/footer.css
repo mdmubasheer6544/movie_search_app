@@ -1,0 +1,33 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border-top: 2px solid;
+    color: #fff;
+    background: #333;
+    width: 95vw;
+    margin: 0 auto;
+}
+
+.aboutSection{
+    display: flex;
+    flex-direction: column;
+}
+.aboutSection h2{
+    padding: 20px;
+}
+
+.aboutSection p{
+    line-height: 2;
+}
+
+.addressSection h3{
+padding: 20px;
+}
+.addressSection ul{
+    list-style-type: none;
+}
+
+.addressSection ul li{
+    padding: 10px 0;
+}

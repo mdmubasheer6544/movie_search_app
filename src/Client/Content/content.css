@@ -1,0 +1,39 @@
+.mainContentCrd{
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    
+/* box-shadow: 0 8px 24px rgb(148 157 128 / 50%); */
+
+box-shadow: rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.mainImg{
+    height: 300px;
+    
+}
+.mainImg img{
+    height: 100%;
+    width: 100%;
+}
+.dateContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 22px 0; */
+    margin-top: auto
+
+}
+.movieTitle{
+    padding-top: 10px;
+}
+.movieTitle sup{
+    background: #0a9217;
+    color: #fff;
+    padding: 1px 5px;
+    border-radius: 8px;
+   
+    font-size: 10px;
+}

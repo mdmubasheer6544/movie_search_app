@@ -1,0 +1,102 @@
+.movieContainer{
+    /* max-width: 1140px; */
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: center;
+    margin: 0 auto;
+
+    padding: 20px 100px;
+}
+
+ .imgContainer{
+    display: flex
+}
+.overviewContainer{
+    padding: 0px 44px;
+}
+.imgContainer img{
+       padding: 10px;
+    border: 2px solid beige;
+}
+
+.genre h2 {
+    padding: 10px;
+}
+
+.genre ul{
+    list-style-type: none;
+    display: flex;
+}
+.genre ul li{
+    margin: 0 10px;
+    border: 1px solid black;
+    padding: 5px 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: red;
+}
+.overview{
+    padding: 30px 0
+}
+.overview h2{
+    padding: 15px 0;
+}
+.overview p{
+    text-align: justify;
+    text-indent: 55px;
+    line-height: 1.5;
+}
+.releaseDateSection{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 23px;
+    box-shadow: rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px;
+}
+.releaseDateSection h3{
+    padding: 6px 0;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border-top: 2px solid;
+    color: #fff;
+    background: #333;
+}
+
+.aboutSection{
+    display: flex;
+    flex-direction: column;
+}
+.aboutSection h2{
+    padding: 20px;
+}
+
+.aboutSection p{
+    line-height: 2;
+}
+
+.addressSection h3{
+padding: 20px;
+}
+.addressSection ul{
+    list-style-type: none;
+}
+
+.addressSection ul li{
+    padding: 10px 0;
+}
+
+.similarContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.similarMoviesContainer{
+    padding-bottom: 30px;
+}
+.similarMoviesContainer h2{
+    padding: 20px;
+    text-transform: uppercase;
+}

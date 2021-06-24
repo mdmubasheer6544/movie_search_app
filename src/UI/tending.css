@@ -1,0 +1,21 @@
+.cardCss{
+    width: 350px;
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: column;
+
+   
+    height: 300px;
+    transition: 1s;
+}
+.rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    padding: 10px;
+}
+.cardCss:hover{
+    transform: scale(1.1);
+
+}
