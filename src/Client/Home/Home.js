@@ -1,20 +1,19 @@
 import React from "react";
 import Categories from "../Categories/Categories";
 import Header from "../Header/Header";
-import { Switch, HashRouter, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import MovieDetails from "../MoviesDetails/MovieDetails";
 import Footer from "../Footer/Footer";
 import Search from "../Search/Search";
 import FirstPage from "./FirstPage";
 import Login from "../Login/Login";
 
+
 const Master = () => {
   return (
-    <Switch>
-      <HashRouter basename="/login">
+    <Switch> 
         <Route exact path="/" component={Login} />
-      </HashRouter>
-        <Route exact path="/home" component={Home} />
+        <Route  component={Home} />
     </Switch>
   );
 };
@@ -22,7 +21,8 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <Route exact path="/home" component={FirstPage} />
+      <FirstPage/>
+      {/* <Route exact path="/home" component={FirstPage} /> */}
       <Route exact path="/show_movie_details/:id" component={MovieDetails} />
       <Route exact path="/search/:key" component={Search} />
       <Route exact path="/categorie/:id" component={Categories} />
