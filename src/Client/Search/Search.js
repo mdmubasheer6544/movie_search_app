@@ -10,7 +10,6 @@ const Search = () => {
     const url = `https://api.themoviedb.org/3/search/movie?api_key=7810631504627958844dab047babd01c&language=en-US&query=${key}&page=1&include_adult=false`;
     fetchContent(url).then((res) => {
       setSearch(res.data.results);
-      console.log(res.data.results);
     });
   };
 

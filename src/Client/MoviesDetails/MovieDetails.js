@@ -9,7 +9,6 @@ const MovieDetails = () => {
   const [similarMovies, setSimilarMovies] = useState([]);
   const [castPerson, setCastPerson] = useState([]);
   let { id } = useParams();
-  let { key } = useParams();
 
   const movieHandler = (id) => {
     const url = `https://api.themoviedb.org/3/movie/${id}?api_key=7810631504627958844dab047babd01c`;
@@ -29,7 +28,6 @@ const MovieDetails = () => {
     const url = `https://api.themoviedb.org/3/movie/${id}/credits?api_key=a4999a28333d1147dbac0d104526337a`;
     fetchContent(url).then((res) => {
       setCastPerson(res.data.cast);
-      console.log(res.data.cast);
     });
   };
 
@@ -45,15 +43,12 @@ const MovieDetails = () => {
         <div className="imgContainer">
           <img
             src={`https://image.tmdb.org/t/p/w500${movieDetails.backdrop_path}`}
-            alt=""
+            alt={movieDetails.title}
+            height="auto"
+            width="500px"
           />
           <div className="overviewContainer">
-            <div className="gene">
-              <h2>Genere</h2>
-              <ul>
-                {/* {movieDetails['genres'].map((gen =><li key={gen.id}>{gen.name}</li>))} */}
-              </ul>
-            </div>
+          
             <div className="overview">
               <h2>Overview</h2>
               <p>{movieDetails.overview}</p>
@@ -82,15 +77,16 @@ const MovieDetails = () => {
             </div>
           </div>
         </div>
-
         <div>
-          <h2 style={{ paddingTop: "60px", textTransform: "uppercase" }}>
-            Casts
-          </h2>
-          <div className="personContainer">
-            {castPerson.slice(0, 4).map((person, index) => {
-              return <PersonDetails key={index} {...person} />;
-            })}
+          <div>
+            <h2 style={{ paddingTop: "60px", textTransform: "uppercase" }}>
+              Casts
+            </h2>
+            <div className="personContainer">
+              {castPerson.slice(0, 4).map((person, index) => {
+                return <PersonDetails key={index} {...person} />;
+              })}
+            </div>
           </div>
         </div>
 

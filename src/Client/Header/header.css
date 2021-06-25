@@ -16,6 +16,14 @@
     list-style-type: none;
   
 }
+.backbtn{
+    background: transparent;
+    border: none;
+    font-weight: bold;
+}
+.backbtn a{
+    text-decoration: none;
+}
 .item{
     margin: 0 10px;
     font-weight: bold;
@@ -26,6 +34,7 @@
     color: #333;
     
 }
+
 .searchBox{
     width: 300px;
     display: flex;
@@ -36,6 +45,11 @@
    z-index: 1;
    position: relative;
 
+}
+.catItem:hover{
+    background: #dcdcdc;
+    padding: 5px;
+    border-radius:5px
 }
 
 .moreCat:hover .moreCategories{
@@ -50,10 +64,10 @@
     top:-200px;
     border:none;
     transition: 1s linear;
-    width: 130px;
+    width: 155px;
     overflow: scroll;
     overflow-x: hidden;
-    /* visibility: hidden; */
+
     box-shadow: rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px;
 }
 .moreCategories li{
@@ -73,3 +87,54 @@
     border-radius: 13px;
     border: none;
 }
+.searchBtn:disabled{
+    background: #dcdcdc;
+}
+
+
+.moreCategories::-webkit-scrollbar {
+    width: 8px;              
+  }
+  
+  .moreCategories::-webkit-scrollbar-track {
+    background: #fff; 
+    border:1px solid #dcdcdc;
+    border-radius:10px       
+  }
+  
+  .moreCategories::-webkit-scrollbar-thumb {
+    background-color: #0085ff;    
+    border-radius: 20px;      
+    
+  }
+
+  @media (max-width:1028px){
+     .header{
+        padding: 15px 10px;
+     }
+     .menuItem{
+        font-size: 14px;
+     }
+
+     .inputBox{
+        width: 170px;
+     }
+  }
+
+  @media (max-width:890px){
+    .header{
+       padding: 15px 10px;
+       justify-content: start;
+    }
+    .menuItem{
+       font-size: 14px;
+    }
+    .searchBox{
+        display: flex;
+width: 0;
+}
+    .inputBox{
+        width: 139px;
+        margin: 0 8px;
+    }
+ }
