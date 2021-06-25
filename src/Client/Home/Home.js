@@ -1,6 +1,6 @@
 import React from "react";
 import Categories from "../Categories/Categories";
-import Haeder from "../Header/Header";
+import Header from "../Header/Header";
 import { Switch, HashRouter, Route, Redirect } from "react-router-dom";
 import MovieDetails from "../MoviesDetails/MovieDetails";
 import Footer from "../Footer/Footer";
@@ -14,14 +14,14 @@ const Master = () => {
       <HashRouter basename="/login">
         <Route exact path="/" component={Login} />
       </HashRouter>
-        <Route component={Home} />
+        <Route exact path="/home" component={Home} />
     </Switch>
   );
 };
 const Home = () => {
   return (
     <div>
-      <Haeder />
+      <Header />
       <Route exact path="/home" component={FirstPage} />
       <Route exact path="/show_movie_details/:id" component={MovieDetails} />
       <Route exact path="/search/:key" component={Search} />
