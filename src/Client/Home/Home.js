@@ -12,8 +12,8 @@ import Login from "../Login/Login";
 const Master = () => {
   return (
     <Switch> 
-        <Route exact path="/" component={Login} />
-        <Route  component={Home} />
+        <Route component={Login} />
+        <Route exact path="/home"  component={Home} />
     </Switch>
   );
 };
