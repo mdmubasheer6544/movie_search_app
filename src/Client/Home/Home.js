@@ -13,8 +13,8 @@ const Master = () => {
     <Switch>
       <HashRouter basename="/login">
         <Route exact path="/" component={Login} />
-        <Route component={Home} />
       </HashRouter>
+        <Route component={Home} />
     </Switch>
   );
 };

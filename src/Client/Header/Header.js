@@ -24,7 +24,7 @@ const Header = () => {
     <div className="header">
       
         <button className="Item backbtn">
-        <h1><Link to="/login">&larr;</Link> </h1>
+        <h1><Link to="/">&larr;</Link> </h1>
         </button>
   
       <ul className="menuItem">
