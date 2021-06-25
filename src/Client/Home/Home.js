@@ -12,7 +12,7 @@ const Master = () => {
   return (
     <Switch>
       <HashRouter basename="/login">
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/" component={Login} />
         <Route component={Home} />
       </HashRouter>
     </Switch>
