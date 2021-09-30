@@ -1,11 +1,11 @@
 import React from "react";
 import Master from "./Client/Home/Home.js";
-import {BrowserRouter} from 'react-router-dom'
+import {BrowserRouter,HashRouter} from 'react-router-dom'
 const Landing = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Master />
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

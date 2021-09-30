@@ -4,9 +4,11 @@ import { useParams } from "react-router-dom";
 import "./movie.css";
 import MainContent from "../Content/MainContent";
 import PersonDetails from "../Persons/PersonDetails";
+
 const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState({});
   const [similarMovies, setSimilarMovies] = useState([]);
+  const [videos, setVideo] = useState([]);
   const [castPerson, setCastPerson] = useState([]);
   let { id } = useParams();
 
@@ -31,6 +33,15 @@ const MovieDetails = () => {
     });
   };
 
+  const videosHandler = (id) => {
+    const url = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=7810631504627958844dab047babd01c&language=en-US`;
+    fetchContent(url).then((res) => {
+      console.log(res);
+      setVideo(res.data["results"][0]);
+      console.log(videos);
+    });
+  };
+
   useEffect(() => {
     movieHandler(id);
     similarMoviesHandler(id);
@@ -47,8 +58,9 @@ const MovieDetails = () => {
             height="auto"
             width="500px"
           />
+         
+       
           <div className="overviewContainer">
-          
             <div className="overview">
               <h2>Overview</h2>
               <p>{movieDetails.overview}</p>

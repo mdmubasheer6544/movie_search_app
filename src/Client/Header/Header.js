@@ -38,7 +38,7 @@ const Header = () => {
         ))}
 
         <li className="moreCat Item" style={{ fontWeight: "bold" }}>
-          More Categories
+          More Categories <i class="fas fa-caret-square-down"></i>
           <ul className="moreCategories">
             {moreCategories.map((cat) => (
               <li className="item catItem" key={cat.id}>
